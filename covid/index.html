@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./resources/css/style.css" />
+  <title>COVID-19 STATS - JAVASCRIPT</title>
+</head>
+
+<body>
+  <!-- <center> -->
+    <!-- <br />
+    <h1 style="font-family: cursive; color: firebrick;">COVID-19 live cases graph </h1>
+    <br /> -->
+  <!-- </center> -->
+  <!-- <header>
+    <div class="logo">
+      <p> <span style="color: red;">COVID-19</span> <br />STATS MADE BY NORTH AIMS</p>
+    </div>
+
+  </header>  -->
+  <main>
+          <!-- <div>sdfkfjhsjkdghsadkjgbvd</div> -->
+    <div class="stats">
+      <div class="latest-report">
+
+        <div class="country">
+          <div class="name">Loading...</div>
+          <!-- button -->
+          <div class="change-country">
+            <button style="background-color: rgba(0, 0, 255, 0.466); color: whitesmoke; 
+           outline: none; border: none; padding: 7px 12px; border-radius: 10px; cursor: pointer; ">Search
+           for Country</button> </div>
+          <div class="search-country hide">
+            <div class="search-box">
+              <input type="text" id="search-input" placeholder="Search Country..." />
+              <img class="close" src="./resources/img/close.svg" alt="" />
+            </div>
+            <div class="country-list"></div>
+          </div>
+        </div>
+        <div class="total-cases">
+          <div class="title">Total Cases</div>
+          <div class="value">0</div>
+          <div class="new-value" style="color: transparent;">+0</div>
+          <div>
+            <h2 style="color:blue; font-family: cursive;" > <span style="color: red;">COVID-19 
+            </span> cases live details</h2>
+          </div>
+        </div>
+        <div class="recovered">
+          <div class="title">Recovered</div>
+          <div class="value">0</div>
+
+          <div class="new-value" style="color: transparent;">+0</div>
+          
+        </div>
+        <div class="deaths">
+          <div class="title">Deaths</div>
+          <div class="value">0</div>
+          <div class="new-value" style="color: transparent;">+0</div>
+        
+
+        </div>
+      </div>
+      <hr>
+      <div class="chart">
+        <canvas id="axes_line_chart"></canvas>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
+    integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
+  <script src="resources/js/countries.js"></script>
+  <script src="resources/js/app.js"></script>
+</body>
+
+</html>

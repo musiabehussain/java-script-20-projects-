@@ -1,0 +1,7 @@
+{
+    "editor.fontSize": 17,
+    "terminal.integrated.minimumContrastRatio": 2,
+    "editor.cursorBlinking": "solid",
+    "editor.cursorSmoothCaretAnimation": true,
+    "liveServer.settings.port": 5501
+}

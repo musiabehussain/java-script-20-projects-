@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Covid Stats</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="header">
+       COVID-19 TRACKER
+      </h1>
+          <select name="countries" id="countries"  class="inputmain" >
+            <option
+            value="all">search for country</option>
+          </select>
+        <div class="country-stats"></div>
+    </div>
+    <div class="chart">
+      <canvas id="axes_line_chart"></canvas>
+
+      <style>
+        .chart{
+    width: 80%;
+    height: 70vh;
+    min-height: 500px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+      </style>
+      <script>
+
+        
+const ctx = document.getElementById("axes_line_chart").getContext("2d");
+
+function updateUI() {
+  updateStats();
+  axesLinearChart();
+}
+
+
+let my_chart;
+function axesLinearChart() {
+  if (my_chart) {
+    my_chart.destroy();
+  }
+
+  my_chart = new Chart(ctx, {
+    type: "line",
+    data: {
+      datasets: [
+        {
+          label: "Cases",
+          data: cases_list,
+          fill: false,
+          borderColor: "#FFF",
+          backgroundColor: "#FFF",
+          borderWidth: 1,
+        },
+        {
+          label: "Recovered",
+          data: recovered_list,
+          fill: false,
+          borderColor: "#009688",
+          backgroundColor: "#009688",
+          borderWidth: 1,
+        },
+        {
+          label: "Deaths",
+          data: deaths_list,
+          fill: false,
+          borderColor: "#f44336",
+          backgroundColor: "#f44336",
+          borderWidth: 1,
+        },
+      ],
+      labels: formatedDates,
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+    },
+  });
+}
+      </script>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
+    integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
